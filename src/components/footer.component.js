@@ -8,6 +8,24 @@ class Footer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            footer_links_1: [
+                {
+                    name: "First Link",
+                    link: "/first-link"
+                },
+                {
+                    name: "Second Link",
+                    link: "/second-link"
+                },
+                {
+                    name: "Third Link",
+                    link: "/third-link"
+                },
+                {
+                    name: "Fourth Link",
+                    link: "/fourth -link"
+                }
+            ]
 
         }
     }
@@ -21,75 +39,30 @@ class Footer extends React.Component {
             <footer className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap md:text-left text-center order-first">
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">First Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Second Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Third Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Fourth Link</Link>
-                                </li>
-                            </nav>
-                        </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">First Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Second Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Third Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Fourth Link</Link>
-                                </li>
-                            </nav>
-                        </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">First Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Second Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Third Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-gray-600 hover:text-gray-800">Fourth Link</Link>
-                                </li>
-                            </nav>
-                        </div>
+
+
+                        <FooterLinksGroup heading="SECTION 1" menuItems={this.state.footer_links_1} />
+                        <FooterLinksGroup heading="SECTION 2" menuItems={this.state.footer_links_1} />
+                        <FooterLinksGroup heading="SECTION 3" menuItems={this.state.footer_links_1} />
+
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE</h2>
                             <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
                                 <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-                                    <label htmlFor="footer-field" className="leading-7 text-sm text-gray-600">Placeholder</label>
+                                    <label htmlFor="footer-field" className="leading-7 text-sm text-gray-600">Email ID:</label>
                                     <input type="text" id="footer-field" name="footer-field" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                 </div>
-                                <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                                <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Subscribe</button>
                             </div>
-                            <p className="text-gray-500 text-sm mt-2 md:text-left text-center">Bitters chicharrones fanny pack
-                                <br className="lg:block hidden" />waistcoat green juice
+                            <p className="text-gray-500 text-sm mt-2 md:text-left text-center">To follow up 
+                                <br className="lg:block hidden" />on our updates
                             </p>
                         </div>
                     </div>
                 </div>
                 <div className="bg-gray-100">
                     <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-                        
+
                         <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© {new Date().getFullYear()} {SiteTitle} —
                             <Link to={AuthorURL} target="_blank" rel="noopener noreferrer" className="text-gray-600 ml-1" >@{Author}</Link>
                         </p>
@@ -125,3 +98,26 @@ class Footer extends React.Component {
 }
 
 export default Footer;
+
+
+const FooterLinksGroup = ({ heading, menuItems }) => {
+    return (
+        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">{heading}</h2>
+            <nav className="list-none mb-10">
+                {menuItems.map((item, index) => (
+                    <FooterLink key={index} name={item.name} link={item.link} />
+                ))}
+            </nav>
+        </div>
+    );
+}
+
+
+const FooterLink = ({ name, link }) => {
+    return (
+        <li>
+            <Link to={link} className="text-gray-600 hover:text-gray-800">{name}</Link>
+        </li>
+    );
+}

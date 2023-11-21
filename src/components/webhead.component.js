@@ -17,7 +17,7 @@ function WebHead({ headInsiders }) {
     return (
         <>
             <Helmet>
-                <title>{(headInsiders.page_title != '' && headInsiders.page_title != null) ? headInsiders.page_title+" - "+SiteTitle : SiteTitle}</title>
+                <title>{(headInsiders.page_title !== '' && headInsiders.page_title !== null) ? headInsiders.page_title+" - "+SiteTitle : SiteTitle}</title>
                 <meta name="keywords" content={keywordsMaker()} />
                 <meta name="description" content={headInsiders.description} />
 

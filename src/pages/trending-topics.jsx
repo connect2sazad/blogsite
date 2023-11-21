@@ -2,12 +2,10 @@ import React from "react";
 
 import WebHead from "../components/webhead.component";
 import MenuBar from "../components/menubar.component";
-import HeroSlider from "../components/heroslider.component";
-import { CTA } from '../components/cta.component';
-import BlogCardsGroup from "../components/blogcardsgroup.component";
+// import HeroSlider from "../components/heroslider.component";
 import Footer from "../components/footer.component";
 
-class HomePage extends React.Component {
+class TrendingTopics extends React.Component {
 
     constructor(props) {
         super(props);
@@ -33,18 +31,7 @@ class HomePage extends React.Component {
 
                 <div className="hero_area">
                     <MenuBar />
-                    <HeroSlider />
-
-                    <CTA 
-                        title="Get the latest topics and news instantly once you let us know your email id!!!"
-                        buttonName="Subscribe Now"
-                        link="#"
-                    />
-
-                    <BlogCardsGroup/>
-                    
-
-                    <Footer/>
+                    <Footer />
                 </div>
 
                 
@@ -53,4 +40,4 @@ class HomePage extends React.Component {
     }
 }
 
-export default HomePage;
+export default TrendingTopics;
