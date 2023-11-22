@@ -6,6 +6,7 @@ import HeroSlider from "../components/heroslider.component";
 import { CTA } from '../components/cta.component';
 import BlogCardsGroup from "../components/blogcardsgroup.component";
 import Footer from "../components/footer.component";
+import BlogDoubleColumns from "../components/blogdoublecolumns.component";
 
 class HomePage extends React.Component {
 
@@ -17,7 +18,7 @@ class HomePage extends React.Component {
                 keywords: ["Best Site", "Best Site 2", "Best Site 3"],
                 description: 'Test Description'
             },
-            
+
         }
     }
 
@@ -35,19 +36,21 @@ class HomePage extends React.Component {
                     <MenuBar />
                     <HeroSlider />
 
-                    <CTA 
+                    <CTA
                         title="Get the latest topics and news instantly once you let us know your email id!!!"
                         buttonName="Subscribe Now"
                         link="#"
                     />
 
-                    <BlogCardsGroup/>
-                    
+                    <BlogDoubleColumns/>
 
-                    <Footer/>
+                    <BlogCardsGroup />
+
+
+                    <Footer />
                 </div>
 
-                
+
             </>
         );
     }

@@ -2,7 +2,7 @@ import React from "react";
 
 import WebHead from "../components/webhead.component";
 import MenuBar from "../components/menubar.component";
-// import HeroSlider from "../components/heroslider.component";
+import BlogDoubleColumnsGroup from '../components/blogdoublecolumns.component'
 import Footer from "../components/footer.component";
 
 class TrendingTopics extends React.Component {
@@ -31,6 +31,10 @@ class TrendingTopics extends React.Component {
 
                 <div className="hero_area">
                     <MenuBar />
+
+                    <BlogDoubleColumnsGroup/>
+                    <BlogDoubleColumnsGroup/>
+
                     <Footer />
                 </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import WebHead from "../components/webhead.component";
 import MenuBar from "../components/menubar.component";
-// import HeroSlider from "../components/heroslider.component";
+import BlogCardsGroup from "../components/blogcardsgroup.component";
 import Footer from "../components/footer.component";
 
 class CategoriesPage extends React.Component {
@@ -31,6 +31,9 @@ class CategoriesPage extends React.Component {
 
                 <div className="hero_area">
                     <MenuBar />
+
+                    <BlogCardsGroup/>
+
                     <Footer />
                 </div>
 

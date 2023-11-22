@@ -5,6 +5,8 @@ import HomePage from "../pages/home";
 import AboutPage from "../pages/about";
 import TrendingTopics from '../pages/trending-topics';
 import CategoriesPage from "../pages/categories";
+import SayHelloPage from "../pages/say-hello";
+import MembershipPage from "../pages/membership";
 
 const theRoutes = [
     {
@@ -22,6 +24,14 @@ const theRoutes = [
     {
         element: <CategoriesPage/>,
         link: '/categories'
+    },
+    {
+        element: <SayHelloPage/>,
+        link: '/say-hello'
+    },
+    {
+        element: <MembershipPage/>,
+        link: '/membership'
     },
 ]
 
