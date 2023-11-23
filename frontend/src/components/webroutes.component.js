@@ -8,6 +8,7 @@ import CategoriesPage from "../pages/categories";
 import SayHelloPage from "../pages/say-hello";
 import MembershipPage from "../pages/membership";
 import SingleBlogPage from "../pages/singleblog";
+import PostByCategoryPage from "../pages/postsbycategory";
 
 const theRoutes = [
     {
@@ -25,6 +26,10 @@ const theRoutes = [
     {
         element: <CategoriesPage/>,
         link: '/categories'
+    },
+    {
+        element: <PostByCategoryPage/>,
+        link: '/categories/:category'
     },
     {
         element: <SayHelloPage/>,
