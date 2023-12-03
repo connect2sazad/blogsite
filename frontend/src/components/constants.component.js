@@ -7,3 +7,6 @@ export const facebook = "https://www.facebook.com";
 export const twitter = "https://www.twitter.com";
 export const instagram = "https://www.instagram.com";
 export const linkedin = "https://www.linkedin.com";
+
+
+export const server = "http://127.0.0.1:8000/api/"

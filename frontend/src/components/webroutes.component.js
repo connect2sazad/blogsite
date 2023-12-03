@@ -9,6 +9,8 @@ import SayHelloPage from "../pages/say-hello";
 import MembershipPage from "../pages/membership";
 import SingleBlogPage from "../pages/singleblog";
 import PostByCategoryPage from "../pages/postsbycategory";
+import SignUpPage from "../pages/signup";
+import SignInPage from "../pages/signin";
 
 const theRoutes = [
     {
@@ -43,6 +45,14 @@ const theRoutes = [
         element: <SingleBlogPage/>,
         link: '/blogs'
     },
+    {
+        element: <SignUpPage/>,
+        link: '/signup'
+    },
+    {
+        element: <SignInPage/>,
+        link: '/signin'
+    }
 ]
 
 const WebRoutes = () => {
